@@ -11,4 +11,9 @@ lazy val root = (project in file("."))
     libraryDependencies += scalaTest % Test
   )
 
+/* To run benchmarks:
+    jmh:run -t 1 -f 1 -wi 5 -i 5 .*Bench.*
+ */
+enablePlugins(JmhPlugin)
+
 // See https://www.scala-sbt.org/1.x/docs/Using-Sonatype.html for instructions on how to publish to Sonatype.
